@@ -1,0 +1,30 @@
+title: Bundle with filename
+filename: bundle.pdf
+hasTableOfContents: true
+hasCoversheets: true
+hasFolderCoversheets: true
+folders:
+  - name: Folder 1
+    sortIndex: 1
+    folders:
+      - name: Subfolder 1
+        sortIndex: 1
+        documents:
+          - type: document
+            property: exampleFolder.secondExampleFile
+      - name: Subfolder 2
+        sortIndex: 2
+        documents:
+          - type: documentSet
+            property: exampleFolder.value.exampleSubfolder
+  - name: Folder 2
+    sortIndex: 2
+    documents:
+      - type: documentSet
+        property: caseDocuments.value
+        filter:
+          - property: documentType
+            value: Marriage certificate
+documents:
+  - type: document
+    property: exampleFolder.exampleFile

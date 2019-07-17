@@ -1,0 +1,32 @@
+title: New complex bundle
+hasCoversheets: true
+hasTableOfContents: true
+hasFolderCoversheets: true
+folders:
+  - name: Folder with documents and documentSets
+    folders:
+      - name: Folder with a document
+        documents:
+          - type: document
+            property: exampleFolder.value.exampleFile
+      - name: Folder with a filtered documentSet
+        documents:
+          - type: documentSet
+            property: exampleFolder.value.exampleSubfolder
+            filter:
+              - property: documentType
+                value: Prosecution
+  - name: Folder with a document and an unfiltered documentSet
+    documents:
+      - type: document
+        property: exampleFolder.value.secondExampleFile
+      - type: documentSet
+        property: caseDocuments
+documents:
+  - type: documentSet
+    property: caseDocuments
+    filter:
+      - property: name
+        value: Document 1
+  - type: document
+    property: otherDocument
